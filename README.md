@@ -1,3 +1,3 @@
-## DICEWARE GENERATOR
+# DICEWARE GENERATOR
 
 This is the source code of the [diceware generator](https://diceware.vercel.app) website. People can use it to generate secure passphrases using the diceware method. The idea is to generate sequences of numbers via dice rolls that serve as keys in a dictionary full of words. The generated words then form a secure and relatively easily memorizable passphrase. Find more info on [EFF's site](https://www.eff.org/dice).
