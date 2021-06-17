@@ -11,6 +11,6 @@ async function generatePhrase(len) {
 
 export default async function (req, res) {
   const len = +req.query.len;
-  const words = await generatePhrase(len);
-  res.status(200).send(JSON.stringify(words));
+  const phrase = await generatePhrase(len);
+  res.status(200).send(JSON.stringify(phrase));
 }
