@@ -1,14 +1,13 @@
 import { findPhrase } from '/lib/lib';
 
-const ENDPOINT =
-  'https://diceware-10a8f-default-rtdb.europe-west1.firebasedatabase.app/dictionary.json';
+const { API_URL, ENDPOINT } = process.env;
 
 function generate(dictionary, n) {
   return n ? `${generate(dictionary, n - 1)} ${findPhrase(dictionary)}` : '';
 }
 
 async function fetchPhrases(len) {
-  const response = await fetch(ENDPOINT);
+  const response = await fetch(API_URL + ENDPOINT);
   const dictionary = await response.json();
   return generate(dictionary, len);
 }
