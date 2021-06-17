@@ -1,0 +1,16 @@
+@import 'global-vars.scss';
+
+.screen {
+  border: .03125rem solid $color-primary;
+  padding: .125em .5em .25em;
+  background: hsla(155 100% 65% / .13);
+  font-size: 2rem;
+  color: hsl(155 100% 88%);
+  text-shadow: 0 0 .1875em $color-primary;
+  width: 25ch;
+}
+
+.word {
+  display: inline;
+  margin: .125em;
+}

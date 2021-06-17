@@ -1,0 +1,15 @@
+@import 'global-vars.scss';
+
+.container {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.footer {
+  color: $color-white;
+  margin-bottom: .5rem;
+}
