@@ -1,19 +1,16 @@
-import { findPhrase } from '/lib/lib';
+import { rollDice } from '/lib/lib';
 
-const { API_URL, ENDPOINT } = process.env;
+async function generatePhrase(len) {
+  const roll = rollDice(5);
+  const url = `${process.env.API_URL}/${roll}.json`;
+  const response = await fetch(url);
+  const word = await response.json();
 
-function generate(dictionary, n) {
-  return n ? `${generate(dictionary, n - 1)} ${findPhrase(dictionary)}` : '';
-}
-
-async function fetchPhrases(len) {
-  const response = await fetch(API_URL + ENDPOINT);
-  const dictionary = await response.json();
-  return generate(dictionary, len);
+  return len ? `${await generatePhrase(len - 1)} ${word}` : '';
 }
 
 export default async function (req, res) {
   const len = +req.query.len;
-  const words = await fetchPhrases(len);
+  const words = await generatePhrase(len);
   res.status(200).send(JSON.stringify(words));
 }
