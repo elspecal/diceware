@@ -10,13 +10,13 @@ async function generatePhrase(len) {
   const url = `${process.env.API_URL}/${roll}.json`;
   const response = await fetch(url);
   const word = await response.json();
-  console.log(word);
+
   return len ? `${await generatePhrase(len - 1)} ${word}` : '';
 }
 
 export default async function (req, res) {
   const len = +req.query.len;
   const phrase = await generatePhrase(len);
-  console.log(phrase);
+
   res.status(200).send(JSON.stringify(phrase.trim()));
 }
