@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 
-import styles from '/styles/Device.module.scss';
+import styles from '../styles/Device.module.scss';
 
 const Status = Object.freeze({
   IDLE: Symbol('idle'),
