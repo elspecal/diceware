@@ -12,108 +12,18 @@
   background: linear-gradient(45deg, #111, #222);
 }
 
-.display {
-  display: flex;
-  align-items: center;
-  gap: .5em;
-}
-
-.copy {
-  width: 2em;
-  height: 2em;
-  stroke: $color-primary;
-  stroke-width: .125em;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-  opacity: .7;
-}
-
-.copy.finished:hover {
-  opacity: 1;
-}
-
-.copy.finished:active {
-  opacity: .7;
-}
-
-.screen {
-  margin: 0;
-  padding: .125em .25em;
-  background: hsla(145 99% 65% / .1);
-  border: .03125rem solid $color-primary;
-  font-family: inherit;
-  font-size: 2rem;
-  color: hsla(145 99% 65% / .6);
-  width: 44ch;
-  height: 1.5em;
-  margin: 0;
-  resize: none;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  cursor: default;
-}
-
-.screen:focus {
-  outline: none;
-}
-
-.screen::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
-.screen.finished {
-  color: hsl(155 100% 88%);
-  text-shadow: 0 0 .1875em $color-primary;
-}
-
 .btn-main {
   font-size: 3rem;
   text-transform: uppercase;
   background: transparent;
   border: .0625em solid $color-primary;
   width: max-content;
-  padding: .0625em .5em;
+  padding: .125em .5em .015625em;
   box-shadow: 0 0 .0625em $color-primary;
   text-shadow: 0 0 .09375em $color-primary;
   color: $color-primary;
 }
 
-.length-controller {
-  margin-right: auto;
-  margin-left: auto;
-  width: max-content;
-}
-
-.length-controller > span {
-  font-size: 1.75rem;
-  margin: 0 .25em;
-  cursor: default;
-}
-
-.length-controller * {
-  text-shadow: 0 0 .0625em $color-primary;
-}
-
-.length-controller > span:hover {
-  border-bottom: .0625em solid $color-primary;
-}
-
-.length-controller > input::selection {
-  background-color: hsl(0 0% 10%);
-  color: $color-primary;
-}
-
-.length-controller > input::selection:focus {
-  background-color: transparent;
-  color: $color-primary;
-}
-
-.length-controller > input:active,
-.length-controller > input:focus,
-.length-controller > input:hover,
 .btn-main:hover {
   background: $color-primary;
   color: #111;
@@ -121,43 +31,8 @@
   text-shadow: 0 0 .0625em #111;
 }
 
-.length-controller > input:active,
-.length-controller > input:focus {
-  outline: none;
-}
-
 .btn-main:active {
   background: hsla(145, 99%, 45%, .1);
   text-shadow: 0 0 .09375em $color-primary;
   color: $color-primary;
-}
-
-.control * {
-  font-family: inherit;
-  color: $color-primary;
-}
-
-.control > label {
-  display: block;
-}
-
-.control > label, .length-controller > input {
-  text-align: center;
-}
-
-.length-controller > input {
-  -moz-appearance: textfield;
-  border: none;
-  background-color: transparent;
-  font-size: 2rem;
-  width: 3ch;
-}
-
-.length-controller > input::-webkit-inner-spin-button, .length-controller > input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.control > label {
-  margin-bottom: 2rem;
 }

@@ -1,0 +1,61 @@
+@import 'global-vars.scss';
+
+.word-cnt-ctrler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.word-cnt-ctrler * {
+  text-shadow: 0 0 .0625em $color-primary;
+  font-family: inherit;
+  color: $color-primary;
+}
+
+.cntr-btn {
+  font-size: 1.75rem;
+  margin: 0 .25em;
+  cursor: default;
+}
+
+.cntr-btn:hover {
+  border-bottom: .0625em solid $color-primary;
+}
+
+.cntr-display {
+  -moz-appearance: textfield;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  width: 2ch;
+}
+
+.cntr-display::selection {
+  background-color: hsl(0 0% 10%);
+  color: $color-primary;
+}
+
+.cntr-display::selection:focus {
+  background-color: transparent;
+  color: $color-primary;
+}
+
+.cntr-display:active,
+.cntr-display:focus,
+.cntr-display:hover {
+  background: $color-primary;
+  color: #111;
+  box-shadow: 0 0 .125em $color-primary;
+  text-shadow: 0 0 .0625em #111;
+}
+
+.cntr-display:active,
+.cntr-display:focus {
+  outline: none;
+}
+
+.cntr-display::-webkit-inner-spin-button, .cntr-display::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

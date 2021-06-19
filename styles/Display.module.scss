@@ -1,16 +1,58 @@
 @import 'global-vars.scss';
 
-.screen {
-  border: .03125rem solid $color-primary;
-  padding: .125em .5em .25em;
-  background: hsla(155 100% 65% / .13);
-  font-size: 2rem;
-  color: hsl(155 100% 88%);
-  text-shadow: 0 0 .1875em $color-primary;
-  width: 25ch;
+.display {
+  display: flex;
+  align-items: center;
+  gap: .5em;
 }
 
-.word {
-  display: inline;
-  margin: .125em;
+.copy {
+  width: 2em;
+  height: 2em;
+  stroke: $color-primary;
+  stroke-width: .125em;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  opacity: .7;
+}
+
+.copy.finished:hover {
+  opacity: 1;
+}
+
+.copy.finished:active {
+  opacity: .7;
+}
+
+.screen {
+  margin: 0;
+  padding: .125em .25em;
+  background: hsla(145 99% 65% / .1);
+  border: .03125rem solid $color-primary;
+  font-family: inherit;
+  font-size: 2rem;
+  color: hsla(145 99% 65% / .6);
+  width: 44ch;
+  height: 1.5em;
+  margin: 0;
+  resize: none;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: default;
+}
+
+.screen:focus {
+  outline: none;
+}
+
+.screen::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.screen.finished {
+  color: hsl(155 100% 88%);
+  text-shadow: 0 0 .1875em $color-primary;
 }
