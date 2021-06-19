@@ -14,11 +14,11 @@
 
 .btn-main {
   font-size: 3rem;
+  line-height: 1em;
   text-transform: uppercase;
   background: transparent;
   border: .0625em solid $color-primary;
-  width: max-content;
-  padding: .125em .5em .015625em;
+  padding: .125em .5em .0625em;
   box-shadow: 0 0 .0625em $color-primary;
   text-shadow: 0 0 .09375em $color-primary;
   color: $color-primary;
